@@ -21,7 +21,24 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
+section {
+  padding: 2rem 9%;
+}
 
+.btn {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: var(--greyish-green);
+  background-color: orange;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  background-color: rgba(255, 166, 0, 0.696);
+}
 header {
   position: fixed;
   top: 0;
@@ -57,6 +74,7 @@ header .navbar a {
 header .navbar a:hover {
   background-color: orange;
   border-radius: 0.5rem;
+  /* color: #fff; */
 }
 
 /* BARS */
@@ -73,12 +91,46 @@ header .fa-bars {
   display: none;
 }
 
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home .content {
+  max-width: 50rem;
+}
+
+.home .content h3 {
+  font-size: 5rem;
+  color: var(--greyish-green);
+}
+
+.home .content span {
+  font-size: 2rem;
+  color: orange;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: #999;
+  padding: 1rem 0;
+  line-height: 1.5;
+  text-transform: none;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
   }
 
   header {
+    padding: 2rem;
+  }
+
+  section {
     padding: 2rem;
   }
 }
@@ -106,5 +158,22 @@ header .fa-bars {
     margin: 1.5rem;
     background: white;
     display: block;
+  }
+  .home .content h3 {
+    font-size: 5rem;
+  }
+
+  .home .content span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    padding: 2rem;
   }
 }
