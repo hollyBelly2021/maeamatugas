@@ -96,13 +96,25 @@ header .navbar a:hover {
 header #toggler {
   display: none;
 }
+
 header .fa-bars {
   font-size: 3rem;
-  color: #333;
+  color: #999;
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   /* border: 0.1rem solid rgba(0, 0, 0, 0.3); */
+  display: none;
+}
+
+header #toggler-2 {
+  display: none;
+}
+header .fa-times {
+  display: none;
+}
+
+header .closebtn {
   display: none;
 }
 
@@ -198,25 +210,73 @@ header .fa-bars {
     display: block;
   }
 
-  /* remember that this have an absolute positioning so putting it on top */
   header .navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #607274;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  header #toggler:checked ~ .navbar {
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    width: 25rem;
+  }
+  header .navbar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+
+  header .fa-times {
+    position: absolute;
+    top: 2rem;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 5rem;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  header .fa-times:hover {
+    background-color: orange;
+    border-radius: 0.5rem;
+  }
+
+  header #toggler-2:checked ~ .navbar {
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    width: 0rem;
+  }
+
+  /* remember that this have an absolute positioning so putting it on top */
+  /* header .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: none;
+    background: #60727470;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  header #toggler:checked ~ .navbar {
-    clip-path: polygon(0 0, 30% 0, 30% 100%, 0 100%);
-  }
+  } */
+  /* header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  } */
 
-  header .navbar a {
+  /* header .navbar a {
     margin: 1.5rem;
-    background: white;
+    background: none;
     display: block;
-  }
+  } */
+
   .home .content h3 {
     font-size: 5rem;
   }

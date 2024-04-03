@@ -15,12 +15,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="nav">
       <input type="checkbox" name="" id="toggler" />
-      <label for="toggler" class="fas fa-bars"></label>
+      <label for="toggler" class="fas fa-bars" onclick="openNav()"></label>
+      <!-- <span class="fas fa-bars" onclick="openNav()"></span> -->
       <a href="#" class="logo">Maea<span>.</span></a>
 
       <nav class="navbar">
+        <input type="checkbox" name="" id="toggler-2" />
+        <label for="toggler" class="fas fa-times" onclick="closeNav()"></label>
         <a href="#about">about</a>
         <a href="#project">project</a>
         <a href="contact">contacts</a>
