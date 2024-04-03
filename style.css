@@ -166,7 +166,7 @@ header .fa-bars {
 
 .about .row .content h3 {
   font-size: 3rem;
-  color: #333;
+  color: var(--greyish-green);
 }
 
 .about .row .content p {
