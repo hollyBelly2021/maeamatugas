@@ -19,13 +19,3 @@ window.addEventListener("resize", function () {
     document.querySelector("body").style.marginLeft = "25rem";
   }
 });
-
-// if (windowWidth > 772) {
-//   document.querySelector("body").style.marginLeft = "0";
-// }
-
-// function closeNav() {
-//   //   document.querySelector(".navbar").style.width = "0";
-
-//   document.querySelector("body").style.marginLeft = "0";
-// }

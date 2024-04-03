@@ -217,7 +217,7 @@ header .closebtn {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #607274;
+    background-color: var(--greyish-green);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
