@@ -2,7 +2,13 @@
 let navChecker = false;
 function openNav() {
   navChecker = true;
-  document.querySelector("body").style.marginLeft = "25rem";
+  let windowWidth = window.innerWidth;
+
+  if (windowWidth < 450) {
+    document.querySelector("body").style.marginLeft = "15rem";
+  } else {
+    document.querySelector("body").style.marginLeft = "25rem";
+  }
 }
 
 function closeNav() {
@@ -16,6 +22,10 @@ window.addEventListener("resize", function () {
   if (windowWidth > 772) {
     document.querySelector("body").style.marginLeft = "0";
   } else if (windowWidth < 772 && navChecker) {
-    document.querySelector("body").style.marginLeft = "25rem";
+    if (windowWidth < 450) {
+      document.querySelector("body").style.marginLeft = "15rem";
+    } else {
+      document.querySelector("body").style.marginLeft = "25rem";
+    }
   }
 });
