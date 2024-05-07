@@ -133,11 +133,11 @@ header .closebtn {
   z-index: 10000;
 }
 
-/* .cursor-1.active {
+.cursor-1.active {
   height: 7rem;
   width: 7rem;
   opacity: 0.3;
-} */
+}
 
 .cursor-2 {
   position: absolute;
@@ -154,9 +154,9 @@ header .closebtn {
   transition: 0.3s linear;
 }
 
-/* .cursor-2.active {
+.cursor-2.active {
   display: none;
-} */
+}
 
 .home {
   display: flex;
@@ -231,6 +231,10 @@ header .closebtn {
   text-transform: none;
 }
 
+.about .row .content .btn {
+  margin: 2rem 0;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -242,6 +246,10 @@ header .closebtn {
 
   section {
     padding: 2rem;
+  }
+  .cursor-1,
+  .cursor-2 {
+    display: none;
   }
 }
 
