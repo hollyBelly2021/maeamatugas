@@ -241,25 +241,6 @@ header .closebtn {
 .about .row .content .btn {
   margin: 2rem 0;
 }
-
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-
-  header {
-    padding: 2rem;
-  }
-
-  section {
-    padding: 2rem;
-  }
-  .cursor-1,
-  .cursor-2 {
-    display: none;
-  }
-}
-
 .project .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -271,7 +252,7 @@ header .closebtn {
   height: 25rem;
   position: relative;
   overflow: hidden;
-  border: 1rem solid #b2a59b;
+  /* border: 1rem solid #b2a59b; */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   background: var(--cream);
   border-radius: 0.5rem;
@@ -285,14 +266,17 @@ header .closebtn {
   z-index: 1;
 }
 .project .box-container .box:hover img {
-  height: 75%;
-  width: 75%;
+  /* height: 75%;
+  width: 75%; */
+  opacity: 0.2;
+  z-index: 0;
 }
 
 .project .box-container .box h3 {
   position: absolute;
-  bottom: 0.5rem;
+  top: 1rem;
   left: 1rem;
+
   font-size: 2.5rem;
   text-transform: uppercase;
   color: var(--greyish-green);
@@ -300,8 +284,8 @@ header .closebtn {
 
 .project .box-container .box .icons {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
 }
 
 .project .box-container .box .icons a {
@@ -321,6 +305,25 @@ header .closebtn {
   background: orange;
   color: #fff;
 }
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+  .cursor-1,
+  .cursor-2 {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   /* body {
     margin-left: 25 rem;
